@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+    background: #999; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.flex-row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    height: 100px;
+}
+
+nav .columns {
+    height: 100%;
+}
+
+nav .two.columns {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+nav .two.columns img {
+    width: 80px;
+    height: auto;
+}
+
+nav .ten.columns ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+nav .ten.columns ul li {
+    margin-bottom: 0;
+}
+
+nav .ten.columns ul li a {
+    color: #111;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content {
+    background: url(../images/home-background.svg) no-repeat center center;
+    background-color:#0e2a47;
+    background-size: contain;
+    background-attachment: local;
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.container.content-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container.content-buttons button {
+    width: 40%;
+    height: 40px;
+    background-color: rgb(0, 0, 0, .45);
+    color: #fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    line-height: 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 12px;
+    border-width: 3px;
+    border-color: #fff;
+    border-radius: 100px;
+    transition: background-color .3s;
+}
+
+.plans {
+    height: 900px;
+    background: url(../images/Cloudy.svg) no-repeat center center;
+    background-color: rgba(0, 44, 101);
+    background-size: cover;
+    background-attachment: local;
+    display: flex;
+}
+
+.plans .container {
+    height: 100%;
+}
+
+.plans .row {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.plans .three.columns {
+    color: white;
+    background-color: rgb(0, 0, 0, .1);
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 60%;
+    height: 30%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.plans .three.columns i  {
+    font-size: 6rem;
+    margin-left: 5px;
+    line-height: 1.4;
+}
+
+.plans .three.columns p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 550px) {
+    .header {
+        height: 20%;
+        position: fixed;
+        top: 0;
+        transition: all 0.3s;
+        z-index: 1;
+    }
+
+    .header .container {
+        height: 100%
+    }
+
+    .navbar {
+        height: 100%;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    nav {
+        height: 100%;
+    }
+
+    nav .two.columns {
+        justify-content: left;
+        align-items: center;
+    }
+
+    nav .two.columns img {
+        width: 100px;
+    }
+
+    nav .ten.columns ul li a {
+        font-size: 2rem;
+    }
+
+    .content {
+        height: 80%;
+        margin-top: 130px;
+    }
+
+    .container.content-buttons button {
+        width: 45%;
+        height: 50px;
+        margin-top: 18px;
+    }
+    
+    .plans {
+        height: 80%;
+        display: block;
+    }
+    
+    .plans .row {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .plans .three.columns {
+        width: 20%;
+        height: 40%;
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 192px;
+        max-height: 192px;
+        flex-direction: column;
+        cursor: pointer;
+        transition: margin-top .3s;
+    }
+
+
+}
+
+@media only screen and (min-width: 769px) {
+
+
+    nav .ten.columns ul li a {
+        color: #555;
+        text-decoration: none;
+    }
+    
+    nav .ten.columns ul li a:hover {
+        color: #111;
+        text-decoration: underline solid rgb(0, 0, 0, .75) 2px;
+    }
+
+    .container.content-buttons button {
+        background-color: rgb(0, 0, 0, .25);
+    }
+
+    .container.content-buttons button:hover {
+        background-color: rgb(0, 0, 0, .45);
+    }
+
+    .plans .three.columns {
+        cursor: pointer;
+        transition: margin-top .3s;
+    }
+
+    .plans .three.columns:hover {
+        margin-top: 20px;
+    }
+}
